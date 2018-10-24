@@ -1,0 +1,30 @@
+﻿@model IEnumerable<WebUniversity.ViewModels.EnrollmentDateGroup>
+
+@{
+    ViewBag.Title = "Students Statistics";
+}
+
+<h2>Student Body Statistics</h2>
+
+<table class="table table-strip">
+
+    <tr>
+        <th>Enrollment Date</th>
+        <th>Students</th>
+    </tr>
+
+    @foreach(var item in Model)
+    {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.EnrollmentDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StudentCount)
+        </td>
+    </tr>
+    }
+
+</table>
+
+<p>Use this area to provide additional information.</p>
